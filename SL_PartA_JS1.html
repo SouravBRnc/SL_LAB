@@ -5,29 +5,28 @@
 <script>
 function fun(){
 	var a = parseInt(document.getElementById("var_a").value);
-	var b = parseInt(document.getElementById("var_b").value);
-	if(isNaN(a)||isNaN(b)){
+	if(isNaN(a)){
 		alert("Only numbers allowed");
 		return;
 	}
-	if(b == 0){
-		alert("Divide by zero error!");
-		return;
+	if(a%3==0){
+		document.getElementById("result3").innerHTML = "Divisible By 3, Result: "+(a/3)+"<br>";
 	}
-	var res = a/b;
-	document.getElementById("result").innerHTML = "Result: "+res;
+	if(a%7==0){
+		document.getElementById("result7").innerHTML = "Divisible By 7, Result: "+(a/7);
+	}
 	document.getElementById("btn").style.display = "none";
-	document.getElementById("result").style.display = "block";
+	document.getElementById("result3").style.display = "block";
+	document.getElementById("result7").style.display = "block";
 }
 </script>
 </head>
 <body>
 <input type="number" placeholder="number_1" id="var_a" required>
 <br>
-<input type="number" placeholder="number_2" id="var_b" required>
-<br>
 <input type="button" id="btn" value="Result" onclick="fun()" style="display:block;">
-<p id="result" style="display:none;">
+<p id="result3" style="display:none;">
 </p>
+<p id="result7" style="display:none"></p>
 </body>
 </html>
