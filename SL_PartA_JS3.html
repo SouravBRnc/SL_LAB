@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function fun(){
+	var sentence = document.getElementById("test").value;
+	words = sentence.split(" ");
+	var count=0;
+	var max=0;
+	for (var i in words){
+		letters = words[i].split("");
+		count = letters.length;
+		if(count>max){
+			max=count;
+			count=0;
+		}
+	}
+	document.getElementById("answer").innerHTML="Longest word has length: "+max;
+	document.getElementById("answer").style.display="block";
+	document.getElementById("btn").style.display="none";
+}
+</script>
+</head>
+<body>
+<form>
+<input type = "text" id="test" placeholder="Your Text Here" required>
+<br>
+<input type = "button" id="btn" value="CLICK ME" onclick="fun()" style="display:block">
+</form>
+<p id="answer" style="display:none"></p>
+</body>
+</html>
