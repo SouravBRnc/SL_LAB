@@ -1,0 +1,55 @@
+<!DCOTYPE html>
+<html>
+<head>
+<script>
+function fun(){
+	document.getElementById("btn").style.display="none";
+	var writer1 = {
+		"name":"Writer_1",
+		"title":"Writer_1_Title"
+	}
+	var writer2 = {
+		"name":"Writer_2",
+		"title":"Writer_2_Title"
+	}
+	var writer3 = {
+		"name":"Writer_3",
+		"title":"Writer_3_Title"
+	}
+	var writer4 = {
+		"name":"Writer_4",
+		"title":"Writer_4_Title"
+	}
+	document.getElementById("some_authors").style.display="block";
+	document.getElementById("w1_name").innerHTML=writer1.name;
+	document.getElementById("w1_title").innerHTML=writer1.title;
+	document.getElementById("w2_name").innerHTML=writer2.name;
+	document.getElementById("w2_title").innerHTML=writer2.title;
+	document.getElementById("tbl").style.display="block";
+	document.getElementById("others").innerHTML=writer3.name+"---"+writer3.title + "<br>" + writer4.name + "---" + writer4.title;
+}
+</script>
+</head>
+<body>
+<table style="display:none;" id="tbl">
+<tr>
+	<th>AUTHOR_NAME</th>
+	<th>TITLE</th>
+</tr>
+<tr>
+	<td id="w1_name"></td>
+	<td id="w1_title"></td>
+</tr>
+<tr>
+	<td id="w2_name"></td>
+	<td id="w2_title"></td>
+</tr>
+</table>
+<br>
+<br>
+<h3 id="some_authors" style="display:none">AUTHOR_NAME --- TITLE</h3>
+<p id="others">
+</p>
+<input type="button" value="See Authors" id="btn" onclick="fun()">
+</body>
+</html>
