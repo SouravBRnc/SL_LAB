@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function add(){
+	var a = parseInt(document.getElementById("num_a").value);
+	var b = parseInt(document.getElementById("num_b").value);
+	document.getElementById("result").innerHTML = "ADDITION RESULT: "+(a+b);
+}
+function sub(){
+	var a = parseInt(document.getElementById("num_a").value);
+	var b = parseInt(document.getElementById("num_b").value);
+	document.getElementById("result").innerHTML = "SUBTRACTION RESULT: "+(a-b);
+}
+function mul(){
+	var a = parseInt(document.getElementById("num_a").value);
+	var b = parseInt(document.getElementById("num_b").value);
+	document.getElementById("result").innerHTML = "MULTIPLICATION RESULT: "+(a*b);
+}
+function div(){
+	var a = parseInt(document.getElementById("num_a").value);
+	var b = parseInt(document.getElementById("num_b").value);
+	if(b==0){
+		alert("DIVIDE BY ZERO ERROR!");
+		return;
+	}
+	document.getElementById("result").innerHTML = "DIVISION RESULT: "+(a/b);
+}
+</script>
+</head>
+<body>
+<input type = "text" id="num_a" placeholder="fisrt number" required>
+<br>
+<input type = "text" id="num_b" placeholder="second number" required>
+<br>
+<input type="radio" name="op" value="add" onclick="add()">ADD
+<br>
+<input type="radio" name="op" value="sub" onclick="sub()">SUBTRACT
+<br>
+<input type="radio" name="op" value="mul" onclick="mul()">MULTIPLY
+<br>
+<input type="radio" name="op" value="div" onclick="div()">DIVIDE
+<br>
+<p id = "result"></p>
+</body>
+</html>
