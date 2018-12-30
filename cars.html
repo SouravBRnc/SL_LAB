@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function maruti(){
+document.getElementById("maruti_row").style.background="yellow";
+car = {"names":["800","Alto","Swift","Ritz"],"color":["red","white","blue"],"year":["2011","2015"],"src":"maruti.jpg"}
+document.getElementById("img").src=car.src;
+document.getElementById("names").innerHTML=car.names;
+document.getElementById("color").innerHTML=car.color;
+document.getElementById("year").innerHTML=car.year;
+document.getElementById("main_div").style.display="block";
+}
+function honda(){
+document.getElementById("honda_row").style.background="yellow";
+car = {"names":["ABC","DEF","GHI","JKL"],"color":["red","white","blue"],"year":["2014","2013"],"src":"honda.jpg"}
+document.getElementById("img").src=car.src;
+document.getElementById("names").innerHTML=car.names;
+document.getElementById("color").innerHTML=car.color;
+document.getElementById("year").innerHTML=car.year;
+document.getElementById("main_div").style.display="block";
+}
+function skoda(){
+document.getElementById("skoda_row").style.background="yellow";
+car = {"names":["SDFAF","GSSA","SFFS","ASD"],"color":["red","blue"],"year":["2007","2010"],"src":"skoda.jpg"}
+document.getElementById("img").src=car.src;
+document.getElementById("names").innerHTML=car.names;
+document.getElementById("color").innerHTML=car.color;
+document.getElementById("year").innerHTML=car.year;
+document.getElementById("main_div").style.display="block";
+}
+function toyota(){
+document.getElementById("toyota_row").style.background="yellow";
+car = {"names":["8ADAA","AAFFA","ASAFE"],"color":["red","green"],"year":["2007","2009","2010"],"src":"toyota.jpg"}
+document.getElementById("img").src=car.src;
+document.getElementById("names").innerHTML=car.names;
+document.getElementById("color").innerHTML=car.color;
+document.getElementById("year").innerHTML=car.year;
+document.getElementById("main_div").style.display="block";
+}
+function blank(){
+document.getElementById("toyota_row").style.background="white";
+document.getElementById("skoda_row").style.background="white";
+document.getElementById("honda_row").style.background="white";
+document.getElementById("maruti_row").style.background="white";
+document.getElementById("main_div").style.display="none";
+}
+</script>
+</head>
+<body>
+<table border="2px">
+<tr>
+<th>Cars Available</th>
+</tr>
+<tr><td id="maruti_row" onmouseover="maruti()" onmouseout="blank()">Mercedes</td></tr>
+<tr><td id="toyota_row" onmouseover="toyota()" onmouseout="blank()">Toyota</td></tr>
+<tr><td id="honda_row" onmouseover="honda()" onmouseout="blank()">Honda</td></tr>
+<tr><td id="skoda_row" onmouseover="skoda()" onmouseout="blank()">Skoda</td></tr>
+</table>
+<br>
+<div id="main_div" style="display:none">
+<img id="img" style="height:200px; width:200px;"></img>
+<p id="names"></p>
+<p id="color"></p>
+<p id="year"></p>
+</div>
+</body>
+</html>
