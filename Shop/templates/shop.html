@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function fun(){
+	if(document.getElementById("apple").value==""){
+		document.getElementById("apple").value=0
+	}
+	if(document.getElementById("banana").value==""){
+		document.getElementById("banana").value=0
+	}
+	if(document.getElementById("mango").value==""){
+		document.getElementById("mango").value=0
+	}
+	var a = document.getElementById("apple").value;
+	var b = document.getElementById("banana").value;
+	var c = document.getElementById("mango").value;
+	if(isNaN(a) || isNaN(b) || isNaN(c)){
+		alert("Please Enter Numerical values!")
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<form action="{{url_for("cart")}}" method="POST">
+Apple(Rs. 200 per KG)<br>
+<input type="number" placeholder="Quantity" id="apple" name="apple"  required>
+<br>
+Banana(Rs. 50 per KG)<br>
+<input type="number" placeholder="Quantity" id="banana" name="banana" required>
+<br>
+Mango(Rs. 100 per KG)<br>
+<input type="number" placeholder="Quantity" id="mango" name="mango" required>
+<br>
+<input type = "submit" value="Place Order" onclick="return fun()">
+</form>
+</body>
+</html>
