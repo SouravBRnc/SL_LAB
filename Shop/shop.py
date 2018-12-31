@@ -1,9 +1,6 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-
-#noa=session['attempts']=0
-#ts=session['tot_sl']=0
 
 @app.route("/", methods=["GET","POST"])
 def cart():
@@ -14,12 +11,6 @@ def cart():
 		b = int(request.form['banana'])
 		c = int(request.form['mango'])
 		cost = a*200 + b*50 + c*100
-		#noa=noa+1
-		#session['attempts']=noa
-		#t_s=t_s+cost
-		#session[tot_sl]=t_s
-		#print(session['attempts'])
-		#print(session['tot_sl'])
 		msg=[]
 		if a>0:
 			app_dict={'item':'Apple','quantity':a,'rate':200,'total':a*200}
